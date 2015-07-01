@@ -14,6 +14,7 @@ class ImagesController < ApplicationController
       redirect_to images_path
     else
       render :new
+    end
   end
 
 end

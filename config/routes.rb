@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :images
+  root :to => 'home#index'
+
+  resources :home, :only => [:index]
+  resources :images, :except => [:edit]
+
 end

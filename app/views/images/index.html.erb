@@ -4,6 +4,7 @@
   <% @images.each do |image| %>
     <li><img src="<%= image.url %>" /></li>
     <li><%= image.caption %></li>
+  <% end %>
 </ul>
 
 <%= link_to "Add Image", new_image_path %>
