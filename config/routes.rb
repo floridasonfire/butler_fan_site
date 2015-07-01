@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :home, :only => [:index]
   resources :images, :except => [:edit]
   resources :posts
+  resources :bios
+
 
 end

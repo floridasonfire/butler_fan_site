@@ -1,0 +1,11 @@
+<%= render "layouts/errors", :object => @bio %>
+
+<%= form_for @bio do |f| %>
+<%= f.label "Image Url" %>
+<%= f.text_field :url %>
+<%= f.label "Name" %>
+<%= f.text_field :name %>
+<%= f.label "Bio" %>
+<%= f.text_field :content %>
+<%= f.submit :class => "btn btn-warning"%>
+<% end %>

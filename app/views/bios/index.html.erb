@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1>BUTLERS!</h1>
+    <%= link_to 'Add Butler', new_bio_path %>
+  </div>
+</div>
+
+<br /><br />
+<% @bios.each do |bio| %>
+  <div class="col-sm-6">
+    <h3><img class="bio-pic" src='<%=bio.url%>' />
+      <%=link_to bio.name, bio_path(bio) %>
+    </h3>
+  </div>
+<% end %>
