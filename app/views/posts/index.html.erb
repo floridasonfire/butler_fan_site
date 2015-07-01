@@ -2,7 +2,7 @@
 
 <%= form_tag("/posts", method: "get") do %>
   <%= text_field_tag "search" %>
-  <%= submit_tag ("Search") %>
+  <%= submit_tag ("Search"), {:class => 'btn btn-warning'} %>
 <% end %>
 
 <%= link_to 'See All Posts', posts_path %>

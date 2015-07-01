@@ -23,8 +23,51 @@
 
 .bio-pic{
   width: 100px;
+  border-radius:10px;
 }
 
 .profile-pic{
   width:100%;
+}
+
+body {
+  background-image: url('http://img.archiexpo.com/images_ae/photo-g/dining-table-traditional-indoor-home-6611-2071793.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  color: white;
+}
+
+h1 {
+  color: white;
+  font-family: 'Great Vibes', cursive;
+}
+
+
+
+.well p {
+  color: black;
+}
+
+.navbar{
+  background-color:white;
+}
+
+a{
+  color:white;
+}
+
+a:hover{
+  color:#fdd77d;
+  text-decoration:none;
+}
+
+.profile{
+  background-color:black;
+  padding:15px;
+  border-radius:10px;
+  opacity:.7;
+}
+
+.well{
+  opacity:.7;
 }
