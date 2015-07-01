@@ -1,4 +1,11 @@
 <h2>Forum</h2>
+
+<%= form_tag("/posts", method: "get") do %>
+  <%= text_field_tag "search" %>
+  <%= submit_tag ("Search") %>
+<% end %>
+
+
 <h3>Talk about your favorite man servant</h3>
 <%= link_to "Add Post", new_post_path %>
 <% @posts.each do |post| %>

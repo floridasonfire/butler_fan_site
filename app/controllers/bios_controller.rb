@@ -1,7 +1,16 @@
 class BiosController < ApplicationController
 
   def index
-    @bios = Bio.all()
+    @order_by = params[:Order]
+    if @order_by == "Name"
+      @bios = Bio.order(:name)
+    elsif @order_by == "Updated Last"
+      @bios = Bio.order(:updated_at)
+    elsif @order_by == "Most Recent"
+      @bios = Bio.order(:created_at)
+    else
+      @bios = Bio.all()
+    end
   end
 
   def show
@@ -25,5 +34,6 @@ class BiosController < ApplicationController
   def bio_params
     params.require(:bio).permit(:url, :name, :content)
   end
+
 
 end

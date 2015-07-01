@@ -6,6 +6,18 @@
 </div>
 
 <br /><br />
+
+<div class="row">
+  <div class="col-sm-4">
+    <h5>Order Results by:</h5>
+    <%= form_tag("/bios", method: "get") do %>
+    <%= select_tag "Order", options_for_select([["Name", "Name"], ["Updated At", "Updated At"], ["Most Resent", "Most Resent"]]), {:class=>'form-control', :onchange => "this.form.submit()"}  %>
+    <br />
+    <%= submit_tag ("Sort") %>
+    <% end %>
+  </div>
+</div>
+
 <% @bios.each do |bio| %>
   <div class="col-sm-6">
     <h3><img class="bio-pic" src='<%=bio.url%>' />

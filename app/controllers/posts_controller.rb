@@ -1,11 +1,16 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all()
+    @search_input = params[:search]
+    if @search_input != nil
+      @posts = Post.search(@search_input)
+    else
+      @posts = Post.all()
+    end
   end
 
   def new
-    @post = Post.new()    
+    @post = Post.new()
   end
 
   def create
