@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe "the add post process" do
   it "adds a new post" do
+    Bio.create({:name => "Tuxedo Man", :url => "Whatever.jpg", :content => "He's great."})
     visit root_path
     click_on "Forum"
     click_on "Add Post"

@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe "the add image process" do
   it "adds a new image" do
+    Bio.create({:name => "Tuxedo Man", :url => "Whatever.jpg", :content => "He's great."})
     visit root_path
     click_on "Images"
     click_on "Add Image"
