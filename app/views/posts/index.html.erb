@@ -1,0 +1,12 @@
+<h2>Forum</h2>
+<h3>Talk about your favorite man servant</h3>
+
+<%= render 'form' %>
+
+<% @posts.each do |post| %>
+  <div class="well">
+    <p><%= post.title %></p>
+    <p><%= post.author %></p>
+    <p><%= post.content %></p>
+  </div>
+<% end %>

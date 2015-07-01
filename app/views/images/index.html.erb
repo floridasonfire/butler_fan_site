@@ -1,10 +1,13 @@
-<h1>Pictures of the worlds greatest butler</h1>
-
-<ul>
-  <% @images.each do |image| %>
-    <li><img src="<%= image.url %>" /></li>
-    <li><%= image.caption %></li>
-  <% end %>
-</ul>
-
+<h1>Pictures of the worlds greatest butlers</h1>
 <%= link_to "Add Image", new_image_path %>
+<br /><br />
+
+
+<div class="row">
+  <% @images.each do |image| %>
+  <div class="col-sm-4">
+    <img class="thumbnail" src="<%= image.url %>" />
+    <em><%= image.caption %></em>
+  </div>
+  <% end %>
+</div>

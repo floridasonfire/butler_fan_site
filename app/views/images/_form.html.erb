@@ -1,0 +1,9 @@
+<%= render "layouts/errors", :object => @image %>
+
+<%= form_for @image do |f| %>
+<%= f.label :url %>
+<%= f.text_field :url %>
+<%= f.label :caption %>
+<%= f.text_field :caption %>
+<%= f.submit :class => "btn-info"%>
+<% end %>
