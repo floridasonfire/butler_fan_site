@@ -1,8 +1,6 @@
 <h2>Forum</h2>
 <h3>Talk about your favorite man servant</h3>
-
-<%= render 'form' %>
-
+<%= link_to "Add Post", new_post_path %>
 <% @posts.each do |post| %>
   <div class="well">
     <p><%= post.title %></p>
